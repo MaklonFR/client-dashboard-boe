@@ -8,7 +8,7 @@ import hashlib
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'pemrograman-web-framework'
-IP_SERVER = "https://c300-182-3-199-57.ngrok-free.app/"
+IP_SERVER = "https://smkn1kuwus.sch.id/client-koperasi-boe/"
 
 def create_connection():
     conn = sqlite3.connect('db_products.db', check_same_thread=False)
