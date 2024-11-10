@@ -12,7 +12,7 @@ IP_SERVER = "https://smkn1kuwus.sch.id/client-koperasi-boe"
 ips = "https://server-admin-five.vercel.app"
 
 def create_connection():
-    conn = sqlite3.connect(IP_SERVER+'/db_products.db', check_same_thread=False)
+    conn = sqlite3.connect(ips+'/db_products.db', check_same_thread=False)
     conn.row_factory = sqlite3.Row  # Ensure that rows are returned as dictionaries
     return conn
 
