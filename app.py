@@ -8,7 +8,7 @@ import hashlib
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'pemrograman-web-framework'
-IP_SERVER = "https://smkn1kuwus.sch.id/client-koperasi-boe/"
+IP_SERVER = "https://smkn1kuwus.sch.id/client-koperasi-boe"
 ips = "https://server-admin-five.vercel.app/"
 
 def create_connection():
