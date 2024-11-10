@@ -1,5 +1,3 @@
-from types import MethodType
-
 import requests
 from flask import Flask, jsonify
 from flask import Flask, render_template, request, redirect, url_for, session, flash
