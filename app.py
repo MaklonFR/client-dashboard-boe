@@ -8,7 +8,8 @@ import hashlib
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'pemrograman-web-framework'
-IP_SERVER = "http://192.168.50.29:80"
+IP_SERVER = "https://smkn1kuwus.sch.id/client-koperasi-boe"
+ips = "https://server-admin-five.vercel.app"
 
 def create_connection():
     conn = sqlite3.connect(IP_SERVER+'/db_products.db', check_same_thread=False)
@@ -21,7 +22,7 @@ products = []
 @app.route ('/')
 def main():
     # Replace this URL with the actual endpoint of your PHP API
-    api_url = IP_SERVER+"/api/get_products"
+    api_url = ips+"/api/get_products"
     try:
         # Mengambil data dari API
         response = requests.get(api_url)
@@ -59,7 +60,7 @@ def display_categories():
 def api_categories(cat):
     cat= cat
     #return render_template("products.html")
-    api_url = IP_SERVER+"/api/categories/"+ cat
+    api_url = ips+"/api/categories/"+ cat
     try:
         # Mengambil data dari API
         response = requests.get(api_url)
@@ -87,7 +88,7 @@ def api_categories(cat):
 def show_desproduct(idb):
     idb= idb
     #return render_template("products.html")
-    api_url = IP_SERVER+"/api/des_product/"+ idb
+    api_url = ips+"/api/des_product/"+ idb
     try:
         # Mengambil data dari API
         response = requests.get(api_url)
